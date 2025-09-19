@@ -24,6 +24,7 @@ async function getFormService(): Promise<any> {
 async function saveToField() {
   const svc = await getFormService();
   await svc.setFieldValue(FIELD_REF_NAME, totalMinutes);
+  await svc.save();
 }
 
 function readInputMinutes(): number {
