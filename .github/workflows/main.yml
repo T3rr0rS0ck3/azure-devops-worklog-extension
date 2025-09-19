@@ -49,3 +49,15 @@ jobs:
           npx tfx extension publish \
             --vsix package/*.vsix \
             --token ${{ secrets.AZDO_PAT }}
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: "Release ${{ github.ref_name }}"
+          body: |
+            🚀 Automatisch veröffentlichte Version ${{ github.ref_name }} der Worklog Extension.
+            - Enthält Build und Publish ins Azure DevOps Marketplace.
+          files: package/*.vsix
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
