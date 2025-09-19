@@ -14,7 +14,7 @@ function formatMinutes(minutes: number): string {
 
 function updateDisplay() {
   const total = document.getElementById("total");
-  if (total) total.textContent = `Gesamt: ${formatMinutes(totalMinutes)}`;
+  if (total) total.textContent = `Total: ${formatMinutes(totalMinutes)}`;
 }
 
 async function getFormService(): Promise<any> {
