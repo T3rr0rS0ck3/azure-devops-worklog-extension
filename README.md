@@ -1,17 +1,17 @@
 
 # Azure DevOps Worklog Extension
 
-Ein Work Item Control, um Arbeitszeit in **Stunden & Minuten** zu buchen.  
-- Hält die **Gesamtsumme** im Custom Field `Custom.LoggedTime` (in Minuten).  
-- Schreibt jede Buchung als **Kommentar** in die **History** („Sessions“).
+A Work Item Control to log work time in **hours & minutes**.  
+- Keeps the **total sum** in the Custom Field `Custom.LoggedTime` (in minutes).  
+- Writes each log entry as a **comment** in the **History** ("Sessions").
 
-## Schnellstart
+## Quick Start
 
-1. **Voraussetzungen**
+1. **Prerequisites**
    - Node.js 18+
-   - (Optional) Azure DevOps `tfx-cli`: `npm i -g tfx-cli` (oder lokal über npm scripts)
+   - (Optional) Azure DevOps `tfx-cli`: `npm i -g tfx-cli` (or locally via npm scripts)
 
-2. **Installieren**
+2. **Install**
    ```bash
    npm install
    ```
@@ -20,32 +20,32 @@ Ein Work Item Control, um Arbeitszeit in **Stunden & Minuten** zu buchen.
    ```bash
    npm run build
    ```
-   Das Ergebnis liegt in `dist/` (HTML + JS Bundle).
+   The result is placed in `dist/` (HTML + JS Bundle).
 
-4. **VSIX Paket bauen**
+4. **Build VSIX Package**
    ```bash
    npm run pack
    ```
-   Das erzeugt `package/worklog-extension-0.0.1.vsix`, das du in Azure DevOps veröffentlichen bzw. in deiner Organisation installieren kannst.
+   This creates `package/worklog-extension-0.0.1.vsix`, which you can publish in Azure DevOps or install in your organization.
 
-## Einbinden im Work Item Formular
+## Integration in Work Item Form
 
-- Füge in deinem Projekt ein **Custom Field** `Custom.LoggedTime` (Ganzzahl) hinzu — es speichert die Minuten.
-- Öffne die **Process**-Einstellungen und füge das **Custom Control** „Worklog Control“ zum gewünschten Work Item Type hinzu.
+- Add a **Custom Field** `Custom.LoggedTime` (integer) to your project — it stores the minutes.
+- Open the **Process** settings and add the **Custom Control** "Worklog Control" to the desired Work Item Type.
 
-## Hinweise
+## Notes
 
-- Die SDK wird per CDN geladen: `https://unpkg.com/azure-devops-extension-sdk@latest`.
-- Kommentare (Sessions) landen im **History**-Tab des Work Items.
-- Du kannst die ID des Feldes in `src/index.ts` über `FIELD_REF_NAME` anpassen.
+- The SDK is loaded via CDN: `https://unpkg.com/azure-devops-extension-sdk@latest`.
+- Comments (Sessions) appear in the **History** tab of the Work Item.
+- You can adjust the field ID in `src/index.ts` via `FIELD_REF_NAME`.
 
-## Entwickeln
+## Development
 
 ```bash
 npm run dev
 ```
-Startet Webpack im Watch-Mode und baut bei Änderungen neu (legt weiterhin in `dist/` ab).
+Starts Webpack in watch mode and rebuilds on changes (still outputs to `dist/`).
 
 ---
 
-Viel Erfolg! ✨
+Good luck! ✨
