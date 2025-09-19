@@ -5,6 +5,9 @@ on:
     tags:
       - "v*.*.*" # Action startet, wenn du ein Git-Tag wie v0.0.7 pushst
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
