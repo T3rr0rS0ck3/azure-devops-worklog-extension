@@ -3,7 +3,7 @@ name: Build & Publish Extension
 on:
   push:
     tags:
-      - "v*.*.*"   # läuft, wenn du ein Tag wie v0.0.7 pusht
+      - "v*.*.*" # Action startet, wenn du ein Git-Tag wie v0.0.7 pushst
 
 jobs:
   build:
@@ -19,6 +19,25 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # Version aus Git-Tag übernehmen
+      - name: Set version from tag
+        run: |
+          VERSION=${GITHUB_REF_NAME#v}
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "Using version $VERSION"
+
+      # Version in package.json setzen
+      - name: Update package.json version
+        run: |
+          npm version --no-git-tag-version $VERSION
+
+      # Version in vss-extension.json setzen
+      - name: Sync version in vss-extension.json
+        run: |
+          jq ".version = \"${VERSION}\"" vss-extension.json > vss-extension.tmp.json
+          mv vss-extension.tmp.json vss-extension.json
+          cat vss-extension.json
+
       - name: Build extension
         run: npm run build
 
@@ -29,6 +48,4 @@ jobs:
         run: |
           npx tfx extension publish \
             --vsix package/*.vsix \
-            --publisher ${{ secrets.AZDO_PUBLISHER }} \
-            --token ${{ secrets.AZDO_PAT }} \
-            --rev-version
+            --token ${{ secrets.AZDO_PAT }}
