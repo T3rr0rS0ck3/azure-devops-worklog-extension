@@ -1,9 +1,9 @@
 {
   "manifestVersion": 1,
   "id": "worklog-extension",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "name": "Worklog Extension",
-  "publisher": "RobinWessel",
+  "publisher": "T3rr0rS0ck3",
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
