@@ -47,5 +47,10 @@
     "color": "rgb(0, 120, 212)",
     "theme": "dark",
     "icon": "images/icon.png"
+  },
+  "content": {
+    "details": {
+      "path": "overview.md"
+    }
   }
 }
