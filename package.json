@@ -1,0 +1,27 @@
+{
+  "name": "azure-devops-worklog-extension",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Azure DevOps Work Item Control zum Buchen von Arbeitszeit inkl. Sessions in der History.",
+  "scripts": {
+    "clean": "rimraf dist package",
+    "build": "webpack --mode production",
+    "dev": "webpack --watch --mode development",
+    "pack": "mkdirp package && npx tfx extension create --root . --manifest-globs vss-extension.json --output-path package/worklog-extension-0.0.1.vsix",
+    "publish": "npx tfx extension publish --root . --manifest-globs vss-extension.json"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
+    "html-webpack-plugin": "^5.6.0",
+    "mkdirp": "^3.0.1",
+    "rimraf": "^5.0.7",
+    "tfx-cli": "^0.22.1",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.5.4",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "azure-devops-extension-sdk": "^3.0.2"
+  }
+}
