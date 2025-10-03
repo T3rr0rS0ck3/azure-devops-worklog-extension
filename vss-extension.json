@@ -7,12 +7,15 @@
       "id": "Microsoft.VisualStudio.Services"
     }
   ],
-  "version": "0.0.8",
+  "version": "0.0.10",
   "name": "Worklog Extension",
   "description": "Logge Arbeitszeit in Minuten/Stunden mit automatischer History.",
   "categories": [
     "Azure Boards"
   ],
+  "icons": {
+    "default": "images/icon.png"
+  },
   "scopes": [
     "vso.work_write"
   ],
