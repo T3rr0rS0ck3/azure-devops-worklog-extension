@@ -10,6 +10,7 @@
   "version": "0.0.10",
   "name": "Worklog Extension",
   "description": "Logge Arbeitszeit in Minuten/Stunden mit automatischer History.",
+  "overview": "overview.md",
   "categories": [
     "Azure Boards"
   ],
@@ -25,7 +26,8 @@
       "addressable": true
     },
     {
-      "path": "overview.md"
+      "path": "overview.md",
+      "addressable": true
     },
     {
       "path": "images",
@@ -55,5 +57,11 @@
     "details": {
       "path": "overview.md"
     }
-  }
+  },
+  "assets": [
+    {
+      "path": "overview.md",
+      "type": "Microsoft.VisualStudio.Services.Content.Details"
+    }
+  ]
 }
