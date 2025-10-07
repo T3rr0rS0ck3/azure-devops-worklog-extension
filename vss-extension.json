@@ -2,6 +2,7 @@
   "manifestVersion": 1,
   "id": "worklog-extension",
   "publisher": "T3rr0rS0ck3",
+  "public": true,
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
