@@ -14,6 +14,7 @@
   "categories": [
     "Azure Boards"
   ],
+  "overview": "overview.md",
   "icons": {
     "default": "images/icon.png"
   },
@@ -26,7 +27,8 @@
       "addressable": true
     },
     {
-      "path": "overview.md"
+      "path": "overview.md",
+       "addressable": true
     },
     {
       "path": "images",
@@ -56,5 +58,11 @@
     "details": {
       "path": "overview.md"
     }
-  }
+  },
+   "assets": [
+    {
+      "path": "overview.md",
+      "type": "Microsoft.VisualStudio.Services.Content.Details"
+    }
+  ]
 }
