@@ -3,7 +3,7 @@ name: Build & Publish Extension
 on:
   push:
     tags:
-  - "v*.*.*" # Action starts when you push a Git tag like v0.0.7
+    - "v*.*.*" # Action starts when you push a Git tag like v0.0.7
 
 permissions:
   contents: write
