@@ -16,16 +16,6 @@ The extension automatically calculates the total sum and writes each change as a
 
 ---
 
-## 🖼️ Screenshots
-
-![Worklog Control](images/screenshot1.png)  
-*The Worklog Control directly in the Work Item*
-
-![History Updates](images/screenshot2.png)  
-*Every change automatically appears in the History*
-
----
-
 ## 🚀 Usage
 
 1. Open a Work Item (e.g., Task or Bug).  
