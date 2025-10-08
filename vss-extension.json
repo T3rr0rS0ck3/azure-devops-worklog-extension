@@ -10,7 +10,7 @@
   ],
   "version": "0.0.10",
   "name": "Worklog Extension",
-  "description": "Logge Arbeitszeit in Minuten/Stunden mit automatischer History.",
+  "description": "Log Worktime in  minutes/hours with automatic history.",
   "categories": [
     "Azure Boards"
   ],
